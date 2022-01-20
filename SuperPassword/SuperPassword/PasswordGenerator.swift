@@ -43,10 +43,10 @@ class PasswordGenerator {
         passwords.removeAll()
         var universe: String = ""
         
-        if useLetters{
+        if useLetters {
             universe += letters
         }
-        if useNumbers{
+        if useNumbers {
             universe += numbers
         }
         if useSpecialCharacters {
@@ -63,7 +63,7 @@ class PasswordGenerator {
                 let index = Int(arc4random_uniform(UInt32(universeArray.count)))
                 password += String(universeArray[index])
             }
-            password.append(password)
+            passwords.append(password)
         }
         
         return passwords

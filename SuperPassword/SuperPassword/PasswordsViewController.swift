@@ -39,6 +39,8 @@ class PasswordsViewController: UIViewController {
         let passwords = passwordGenerator.generate(total: numberOfPasswords)
         for password in passwords{
             tvPasswords.text.append(password + "\n\n")
+            print(password)
+            print("Foi gerado o password")
         }
     }
     
@@ -46,6 +48,8 @@ class PasswordsViewController: UIViewController {
         
         @IBAction func generate(_ sender: Any) {
             generatePasswords()
+            
+            print("foi chamado o gerador novamente")
         }
 
 }
